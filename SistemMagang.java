@@ -141,5 +141,15 @@ public class SistemMagang {
 
     //jumlah pendaftar dari statusnya
     static void Status() {
+        int countDiterima = 0;
+        int countMenunggu = 0;
+        int countDitolak = 0;
+
+
+        System.out.println("Diterima : " + countDiterima);
+        System.out.println("Menunggu : " + countMenunggu);
+        System.out.println("Ditolak  : " + countDitolak);
+        System.out.println("Total pendaftar: " + jumlahData);
+
     }
 }
