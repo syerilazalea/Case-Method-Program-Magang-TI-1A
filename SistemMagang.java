@@ -100,6 +100,11 @@ public class SistemMagang {
 
     // buat tampilkan data
     static void tampilkanData() {
+        if (jumlahData == 0) {
+            System.out.println("Belum ada data.");
+            return;
+        }
+
         System.out.printf("%-20s %-10s %-20s %-15s %-10s %-10s\n",
             "NAMA", "NIM", "PRODI", "PERUSAHAAN", "SMT", "STATUS");
         System.out.println("-----------------------------------------------------------------------------------------");
