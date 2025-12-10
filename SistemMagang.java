@@ -99,6 +99,22 @@ public class SistemMagang {
 
     // buat tampilkan data
     static void tampilkanData() {
+        System.out.printf("%-20s %-10s %-20s %-15s %-10s %-10s\n",
+            "NAMA", "NIM", "PRODI", "PERUSAHAAN", "SMT", "STATUS");
+        System.out.println("-----------------------------------------------------------------------------------------");
+
+
+        for (int i = 0; i < jumlahData; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (j == 0) System.out.printf("%-20s ", dataMagang[i][j]);      
+                else if (j == 1) System.out.printf("%-10s ", dataMagang[i][j]);
+                else if (j == 2) System.out.printf("%-20s ", dataMagang[i][j]);
+                else if (j == 3) System.out.printf("%-15s ", dataMagang[i][j]);
+                else if (j == 4) System.out.printf("%-10s ", dataMagang[i][j]);
+                else System.out.printf("%-10s", dataMagang[i][j]);            
+            }
+            System.out.println();
+        }
     }
 
     //cari data prodi
