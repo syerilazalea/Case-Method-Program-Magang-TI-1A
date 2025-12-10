@@ -145,6 +145,17 @@ public class SistemMagang {
         int countMenunggu = 0;
         int countDitolak = 0;
 
+        for (int i = 0; i < jumlahData; i++) {
+            String status = dataMagang[i][5];
+            if (status.equals("Diterima")) {
+                countDiterima++;
+            } else if (status.equals("Menunggu")) {
+                countMenunggu++;
+            } else if (status.equals("Ditolak")) {
+                countDitolak++;
+            }
+        }
+
 
         System.out.println("Diterima : " + countDiterima);
         System.out.println("Menunggu : " + countMenunggu);
