@@ -64,6 +64,7 @@ public class SistemMagang {
             if (semester.equals("6") || semester.equals("7")) {
                 break;
             }
+            System.out.println("Semester harus 6 atau 7!");
         }
 
 
