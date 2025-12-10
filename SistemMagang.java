@@ -119,6 +119,24 @@ public class SistemMagang {
 
     //cari data prodi
     static void cariProdi() {
+        System.out.print("Masukkan Program Studi yang dicari: ");
+        String cariProdi = scanner.nextLine();
+       
+        boolean ditemukan = false;
+        System.out.println("Hasil Pencarian:");
+       
+        for (int i = 0; i < jumlahData; i++) {
+            if (dataMagang[i][2].equalsIgnoreCase(cariProdi)) {
+                System.out.println("- " + dataMagang[i][0] + " (" + dataMagang[i][1] + ") - Status: " + dataMagang[i][5]);
+                ditemukan = true;
+            }
+        }
+
+
+        if (!ditemukan) {
+            System.out.println("Data tidak ditemukan untuk prodi tersebut.");
+        }
+
     }
 
     //jumlah pendaftar dari statusnya
