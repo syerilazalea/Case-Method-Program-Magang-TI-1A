@@ -162,7 +162,6 @@ public class SistemMagang {
             }
         }
 
-
         System.out.println("Diterima : " + countDiterima);
         System.out.println("Menunggu : " + countMenunggu);
         System.out.println("Ditolak  : " + countDitolak);
