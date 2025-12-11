@@ -131,21 +131,31 @@ public class SistemMagang {
     static void cariProdi() {
         System.out.print("Masukkan Program Studi yang dicari: ");
         String cariProdi = scanner.nextLine();
-       
-        boolean ditemukan = false;
-        System.out.print = "Masukkan Nama Prodi:";
 
-for (int i = 0; i < jumlahData; i++) {
-    if (dataMagang[i][2].equalsIgnoreCase(cariProdi)) {
-        System.out.println("- " + dataMagang[i][0] + " (" + dataMagang[i][1] + ") - Status: " + dataMagang[i][5]);
+        boolean ditemukan = false;
+        System.out.println("Data Mahasiswa Magang ");
+        System.out.printf("%-20s %-10s %-20s %-15s %-10s %-10s\n",
+                "NAMA", "NIM", "PRODI", "PERUSAHAAN", "SMT", "STATUS");
+        System.out.println("-----------------------------------------------------------------------------------------");
+
+        for (int i = 0; i < jumlahData; i++) {
+            if (dataMagang[i][2].equalsIgnoreCase(cariProdi)) {
+               System.out.printf("%-20s %-10s %-20s %-15s %-10s %-10s\n",
+                dataMagang[i][0], 
+                dataMagang[i][1], 
+                dataMagang[i][2], 
+                dataMagang[i][3], 
+                dataMagang[i][4],
+                dataMagang[i][5]  
+        );
+
         ditemukan = true;
     }
-}
+        }
 
-if (ditemukan == false) {
-    System.out.println("Data tidak ditemukan untuk prodi tersebut.");
-}
-
+        if (ditemukan == false) {
+            System.out.println("Data tidak ditemukan untuk prodi tersebut.");
+        }
 
     }
 
